@@ -92,7 +92,7 @@ public class FileProcessing {
 	        return false;
 	    }
 	    
-	    String[] parts = line.trim().split(",\\s*");                                         // Split the line by commas, ignoring spaces after commas	    
+	    String[] parts = line.trim().split("\\s+");                                         // Split the line by commas, ignoring spaces after commas	    
 	    
 	    if (parts.length != VecOperations.getFeaturesCount() + 1) {                          // Check if the number of elements in the line is correct
 	        System.out.println(ConsoleColour.RED);                                           // Set console text color to red for error messages
@@ -103,7 +103,7 @@ public class FileProcessing {
 	    }
 
 	    
-	    if (!parts[0].matches("\\p{Alpha}+")) {                                              // Check if the first element is a valid word (only alphabetic characters)
+	    if (parts[0].trim().isEmpty()) {                                            // Check if the first element is a valid word (only alphabetic characters)
 	        System.out.println(ConsoleColour.RED);                                           // Set console text color to red for error messages
 	        System.out.println("The first element in line " + lineNumber + 
 	        		" is not a word: " + parts[0]);                                          // Display error message that the first element is not a word
@@ -158,7 +158,7 @@ public class FileProcessing {
 			int index = 0;                                                                   // Initialize index
 			int progress = 0;                                                                // Initialize progress
 			while ((line = reader.readLine()) != null && index < valLine) {                  // Loop reads each line from the BufferedReader
-				String[] parts = line.split(",");                                            // Split the line by commas
+				String[] parts = line.split("\\s+");                                            // Split the line by commas
 				words[index] = parts[0].trim();                                              // Get the word
 				for (int i = 1; i <= VecOperations.getFeaturesCount(); i++) {                // Loop through the vector values
 					vectors[index][i - 1] = Double.parseDouble(parts[i].trim());             // Parse and store each vector value
