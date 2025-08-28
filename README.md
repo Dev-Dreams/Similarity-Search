@@ -13,7 +13,7 @@ Before running the application, you must download the Wikipedia 2014 + Gigaword 
 
 #### Steps to Download:
 1. Visit the GloVe project repository: GloVe on [GitHub](https://github.com/stanfordnlp/GloVe?tab=readme-ov-file).
-2. Download the file glove.6B.zip [glove.6B.zip](https://huggingface.co/stanfordnlp/glove/resolve/main/glove.6B.zip) [mirror](https://nlp.stanford.edu/data/wordvecs/glove.6B.zip)
+2. Download the file glove.6B.zip [glove.6B.zip](https://huggingface.co/stanfordnlp/glove/resolve/main/glove.6B.zip)  [[mirror](https://nlp.stanford.edu/data/wordvecs/glove.6B.zip)]
 3. Unzip the file to obtain glove.6B.50d.txt.
 
 ## To Run 
